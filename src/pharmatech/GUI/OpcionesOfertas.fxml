@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmatech.GUI.controllers.OpcionesOfertasController">
+   <children>
+      <Button fx:id="buttonDosPorUno" layoutX="63.0" layoutY="175.0" mnemonicParsing="false" onAction="#buttonDosPorUno" prefHeight="25.0" prefWidth="67.0" text="2x1" />
+      <Button fx:id="buttonDescuento" layoutX="241.0" layoutY="175.0" mnemonicParsing="false" onAction="#buttonDescuento" text="Descuento" />
+      <Button fx:id="buttonPaquetes" layoutX="458.0" layoutY="175.0" mnemonicParsing="false" onAction="#buttonPaquetes" text="Paquete" />
+      <Label layoutX="212.0" layoutY="75.0" prefHeight="35.0" prefWidth="161.0" text="Tipo Promociones">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgBack" fitHeight="35.0" fitWidth="33.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/btnBack.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

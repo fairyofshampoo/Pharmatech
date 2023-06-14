@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="424.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmatech.GUI.controllers.DescuentoController">
+   <children>
+      <ImageView fitHeight="424.0" fitWidth="277.0" layoutX="334.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="148.0" layoutY="20.0" text="Descuento">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxArticulo" layoutX="51.0" layoutY="107.0" prefHeight="23.0" prefWidth="196.0" />
+      <ChoiceBox fx:id="choiceBoxDiaPromocion" layoutX="51.0" layoutY="212.0" prefHeight="23.0" prefWidth="196.0" />
+      <TextField fx:id="textFieldPorcentajeDescuento" layoutX="55.0" layoutY="317.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="56.0" layoutY="79.0" text="Articulo" />
+      <Label layoutX="51.0" layoutY="186.0" text="Dia de promocion" />
+      <Label layoutX="55.0" layoutY="291.0" text="Porcentaje de descuento" />
+      <Button fx:id="buttonGuardar" layoutX="69.0" layoutY="369.0" mnemonicParsing="false" onAction="#buttonGuardar" text="Guardar" />
+      <Button fx:id="buttonCancelar" layoutX="186.0" layoutY="369.0" mnemonicParsing="false" onAction="#buttonCancelar" text="Cancelar" />
+   </children>
+</AnchorPane>
