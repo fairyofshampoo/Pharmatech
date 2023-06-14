@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmatech.GUI.controllers.ConsultarDosPorUnoController">
+           <children>
+      <Label layoutX="239.0" layoutY="48.0" text="Dos Por Uno">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="258.0" layoutY="24.0" prefHeight="24.0" prefWidth="84.0" text="PHARMATECH" />
+      <Label layoutX="75.0" layoutY="103.0" text="Lista de promociones" />
+      <Button fx:id="botonadd" layoutX="479.0" layoutY="91.0" mnemonicParsing="false" onAction="#botonadd" prefHeight="24.0" prefWidth="55.0" text="Añadir" />
+      <TableView fx:id="tablaviewPromociones" layoutX="75.0" layoutY="137.0" prefHeight="200.0" prefWidth="474.0">
+        <columns>
+          <TableColumn fx:id="columnaIdPromocion" prefWidth="204.0" text="idPromocion" />
+          <TableColumn fx:id="columnaArticulo" prefWidth="122.0" text="Articulo" />
+            <TableColumn fx:id="columnaDia" prefWidth="147.0" text="Dia" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonModificar" layoutX="350.0" layoutY="348.0" mnemonicParsing="false" onAction="#botonModificar" prefHeight="25.0" prefWidth="75.0" text="Modificar" />
+      <Button fx:id="botonEliminar" layoutX="469.0" layoutY="348.0" mnemonicParsing="false" onAction="#botonEliminar" prefHeight="25.0" prefWidth="75.0" text="Eliminar" />
+      <ImageView fx:id="imgBack" fitHeight="35.0" fitWidth="33.0" layoutX="24.0" layoutY="24.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/btnBack.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

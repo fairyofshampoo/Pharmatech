@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmatech.GUI.controllers.DetalleProductoInventarioController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E5E5E5;">
+         <children>
+            <Pane layoutX="17.0" layoutY="103.0" prefHeight="220.0" prefWidth="566.0" style="-fx-background-color: #ffffffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Código">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="283.0" layoutY="14.0" text="Nombre">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="117.0" text="Cantidad">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="183.0" layoutY="116.0" text="Fecha de caducidad">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="398.0" layoutY="117.0" text="Tipo">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCantidad" layoutX="14.0" layoutY="140.0" onKeyTyped="#setCantidadErrorInvisible" prefHeight="25.0" prefWidth="65.0" />
+                  <DatePicker fx:id="dpCaducidad" layoutX="183.0" layoutY="139.0" />
+                  <Label fx:id="lblNombre" layoutX="279.0" layoutY="41.0" prefHeight="17.0" prefWidth="276.0" wrapText="true" />
+                  <Label fx:id="lblTipo" layoutX="398.0" layoutY="144.0" prefHeight="17.0" prefWidth="158.0" wrapText="true" />
+                  <Label fx:id="lblCantidadError" layoutX="14.0" layoutY="173.0" prefHeight="17.0" prefWidth="158.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCaducidadError" layoutX="183.0" layoutY="173.0" prefHeight="17.0" prefWidth="193.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCodigo" layoutX="14.0" layoutY="41.0" prefHeight="17.0" prefWidth="193.0" text="Label" />
+               </children>
+            </Pane>
+            <Label layoutX="26.0" layoutY="69.0" text="Modificar producto">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnGuardar" layoutX="26.0" layoutY="341.0" mnemonicParsing="false" onAction="#updateArticulo" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #BCBEFA; -fx-background-radius: 10;" text="Guardar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelar" layoutX="155.0" layoutY="341.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #BCBEFA; -fx-background-radius: 10;" text="Cancelar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmatech.GUI.controllers.VentaController">
+   <children>
+      <ScrollPane prefHeight="400.0" prefWidth="600.0">
+         <content>
+            <Pane prefHeight="533.0" prefWidth="610.0">
+               <children>
+                  <Button fx:id="btnBuscarProducto" layoutX="461.0" layoutY="67.0" mnemonicParsing="false" onAction="#buscarProducto" prefHeight="26.0" prefWidth="66.0" text="Buscar" />
+                  <ImageView fitHeight="67.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/LOGO.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="98.0" layoutY="14.0" text="DATOS VENTA">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="245.0" layoutY="14.0" prefHeight="18.0" prefWidth="108.0" text="Fecha de Venta:" />
+                  <Label layoutX="68.0" layoutY="49.0" prefHeight="18.0" prefWidth="314.0" text="Buscar producto por nombre" />
+                  <TextField fx:id="txtSearchProducto" layoutX="60.0" layoutY="68.0" prefHeight="25.0" prefWidth="391.0" />
+                  <Label layoutX="14.0" layoutY="110.0" prefHeight="18.0" prefWidth="108.0" text="Precio Producto:" />
+                  <Label layoutX="14.0" layoutY="194.0" prefHeight="18.0" prefWidth="108.0" text="Cantidad:" />
+                  <Spinner fx:id="spnCantidad" layoutX="90.0" layoutY="191.0" prefHeight="26.0" prefWidth="98.0" />
+                  <Label fx:id="lblFechaVenta" layoutX="351.0" layoutY="14.0" prefHeight="17.0" prefWidth="222.0" text=" " />
+                  <Label fx:id="lblPrecio" layoutX="119.0" layoutY="111.0" prefHeight="17.0" prefWidth="91.0" text=" " />
+                  <TableView fx:id="tblVenta" layoutX="32.0" layoutY="229.0" prefHeight="193.0" prefWidth="534.0">
+                    <columns>
+                      <TableColumn fx:id="clmnCodigo" prefWidth="69.60000228881836" text="Código" />
+                      <TableColumn fx:id="clmnProducto" prefWidth="164.8000030517578" text="Producto" />
+                        <TableColumn fx:id="clmnCantidad" prefWidth="74.39996337890625" text="Cantidad" />
+                        <TableColumn fx:id="clmnPrecio" prefWidth="90.4000244140625" text="Precio" />
+                        <TableColumn fx:id="clmnTotal" prefWidth="135.99993896484375" text="Total" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="140.0" prefHeight="18.0" prefWidth="108.0" text="Nombre Producto:" />
+                  <Label fx:id="lblProductoNombre" layoutX="132.0" layoutY="140.0" prefHeight="18.0" prefWidth="226.0" text=" " />
+                  <Label layoutX="286.0" layoutY="433.0" prefHeight="18.0" prefWidth="108.0" text="TOTAL A PAGAR:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalPago" layoutX="393.0" layoutY="433.0" prefHeight="18.0" prefWidth="108.0" text=" " />
+                  <Button fx:id="btnGenerarVenta" layoutX="72.0" layoutY="478.0" mnemonicParsing="false" onAction="#vender" text="Generar Venta" />
+                  <Button fx:id="btnCancelarVenta" layoutX="399.0" layoutY="478.0" mnemonicParsing="false" onAction="#cancelarVenta" text="Cancelar Venta" />
+                  <Label layoutX="377.0" layoutY="122.0" prefHeight="18.0" prefWidth="46.0" text="Stock:" />
+                  <Label fx:id="lblStock" layoutX="462.0" layoutY="122.0" prefHeight="18.0" prefWidth="46.0" text=" " />
+                  <Button fx:id="btnAgregarProducto" layoutX="442.0" layoutY="192.0" mnemonicParsing="false" onAction="#agregarProducto" prefHeight="25.0" prefWidth="87.0" text="Agregar" />
+                  <ChoiceBox fx:id="cbxProductos" layoutX="224.0" layoutY="192.0" onMouseClicked="#seleccionarProducto" prefWidth="150.0" />
+                  <Label layoutX="232.0" layoutY="170.0" prefHeight="17.0" prefWidth="134.0" text="Seleccione producto" />
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmatech.GUI.controllers.RegistroProductoInventarioController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E5E5E5;">
+         <children>
+            <Pane layoutX="11.0" layoutY="129.0" prefHeight="165.0" prefWidth="579.0" style="-fx-background-color: #FFFFFFFF;">
+               <children>
+                  <Label layoutX="29.0" layoutY="14.0" text="Ingresa el nombre">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNombre" layoutX="28.0" layoutY="33.0" onKeyTyped="#setCodigoErrorInvisible" prefHeight="25.0" prefWidth="226.0" />
+                  <TextField fx:id="txtCantidad" layoutX="28.0" layoutY="94.0" onKeyTyped="#setCantidadErrorInvisible" prefHeight="25.0" prefWidth="61.0" />
+                  <Label layoutX="28.0" layoutY="76.0" text="Cantidad">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="187.0" layoutY="74.0" text="Fecha de caducidad">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dpCaducidad" layoutX="189.0" layoutY="94.0" />
+                  <Label layoutX="307.0" layoutY="14.0" text="Selecciona el producto">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgSearch" fitHeight="17.0" fitWidth="20.0" layoutX="234.0" layoutY="37.0" onMouseClicked="#searchArticulo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/searchIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblNombreError" layoutX="310.0" layoutY="59.0" prefHeight="17.0" prefWidth="220.0" text="error" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCantidadError" layoutX="28.0" layoutY="119.0" prefHeight="17.0" prefWidth="137.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCaducidadError" layoutX="182.0" layoutY="119.0" prefHeight="17.0" prefWidth="189.0" textFill="RED" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="cbxArticulo" layoutX="307.0" layoutY="33.0" prefHeight="25.0" prefWidth="263.0" />
+               </children>
+            </Pane>
+            <Label layoutX="40.0" layoutY="76.0" text="Añadir producto">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAgregar" layoutX="40.0" layoutY="341.0" mnemonicParsing="false" onAction="#addArticulo" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #BCBEFA; -fx-background-radius: 10;" text="Agregar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelar" layoutX="162.0" layoutY="341.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #BCBEFA; -fx-background-radius: 10;" text="Cancelar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
